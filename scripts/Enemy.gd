@@ -43,6 +43,10 @@ func _on_right_collision(body):
 func _on_top_collision(body):
 	if body.name == "Player":
 		print("玩家踩死了敌人！")
+		
+		# 播放敌人死亡音效
+		$DeathAudio.play()
+		
 		# 敌人被消灭，玩家获得分数和反弹
 		var game_manager = get_node("/root/GameManager")
 		if game_manager:
@@ -51,7 +55,8 @@ func _on_top_collision(body):
 		# 给玩家一个反弹效果
 		body.velocity.y = -300
 		
-		# 销毁敌人
+		# 等待音效播放完毕再销毁敌人
+		await $DeathAudio.finished
 		queue_free()
 
 # 伤害玩家的函数

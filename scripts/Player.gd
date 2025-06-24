@@ -26,6 +26,8 @@ func _normal_physics(delta):
 	# 处理跳跃
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		# 播放跳跃音效
+		$JumpAudio.play()
 
 	# 处理左右移动
 	var direction = Input.get_axis("ui_left", "ui_right")
@@ -54,6 +56,9 @@ func die():
 	
 	print("玩家死亡！播放死亡动画")
 	is_dead = true
+	
+	# 播放死亡音效
+	$DeathAudio.play()
 	
 	# 死亡动画：向上飞起
 	velocity.x = 0

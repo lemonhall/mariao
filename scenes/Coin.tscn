@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxm9p5n7k2qrt"]
+[gd_scene load_steps=4 format=3 uid="uid://cxm9p5n7k2qrt"]
 
 [ext_resource type="Script" path="res://scripts/Coin.gd" id="1_coin_script"]
 [ext_resource type="Texture2D" uid="uid://coin_svg" path="res://assets/coin.svg" id="2_coin_texture"]
+[ext_resource type="AudioStream" uid="uid://coin_audio" path="res://audio/sfx/coin.wav" id="3_coin_audio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_coin"]
 size = Vector2(24, 24)
@@ -15,4 +16,7 @@ shape = SubResource("RectangleShape2D_coin")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_coin_texture")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."] 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CoinAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_coin_audio") 

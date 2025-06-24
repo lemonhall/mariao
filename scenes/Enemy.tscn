@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkl8n3v2x7qmr"]
+[gd_scene load_steps=8 format=3 uid="uid://bkl8n3v2x7qmr"]
 
 [ext_resource type="Script" uid="uid://bokr0x5i0k8f4" path="res://scripts/Enemy.gd" id="1_enemy_script"]
 [ext_resource type="Texture2D" uid="uid://xim2a36qq46s" path="res://assets/enemy.svg" id="2_enemy_texture"]
+[ext_resource type="AudioStream" uid="uid://cvilb01aypq24" path="res://audio/sfx/enemy_death.wav" id="3_enemy_death_audio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_enemy"]
 size = Vector2(32, 32)
@@ -41,3 +42,6 @@ shape = SubResource("RectangleShape2D_right")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopArea"]
 position = Vector2(0, -20)
 shape = SubResource("RectangleShape2D_top")
+
+[node name="DeathAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_enemy_death_audio")
