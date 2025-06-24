@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- 外圈金边 -->
+  <circle cx="12" cy="12" r="11" fill="#DAA520"/>
+  
+  <!-- 内圈金色 -->
+  <circle cx="12" cy="12" r="9" fill="#FFD700"/>
+  
+  <!-- 中心装饰 -->
+  <circle cx="12" cy="12" r="6" fill="#FFA500"/>
+  
+  <!-- 星形装饰 -->
+  <polygon points="12,4 13.5,9 18,9 14.5,12 16,17 12,14 8,17 9.5,12 6,9 10.5,9" fill="#FFD700"/>
+  
+  <!-- 高光效果 -->
+  <ellipse cx="9" cy="8" rx="2" ry="3" fill="#FFFFFF" opacity="0.3"/>
+  
+  <!-- 内部阴影 -->
+  <circle cx="12" cy="12" r="9" fill="none" stroke="#B8860B" stroke-width="1"/>
+</svg> 

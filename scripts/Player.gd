@@ -36,14 +36,11 @@ func _normal_physics(delta):
 
 	move_and_slide()
 
-	# 简单的视觉反馈（改变颜色表示移动方向）
-	var sprite = $Sprite2D
+	# 处理精灵翻转
 	if direction > 0:
-		sprite.color = Color(1, 0.2, 0.2, 1)  # 红色
+		$Sprite2D.flip_h = false
 	elif direction < 0:
-		sprite.color = Color(0.2, 0.2, 1, 1)  # 蓝色
-	else:
-		sprite.color = Color(1, 0.2, 0.2, 1)  # 默认红色
+		$Sprite2D.flip_h = true
 
 func _death_physics(delta):
 	# 死亡时只受重力影响，不能移动
@@ -63,7 +60,7 @@ func die():
 	velocity.y = -500
 	
 	# 改变玩家颜色表示死亡状态
-	$Sprite2D.color = Color(0.5, 0.5, 0.5, 1)  # 灰色
+	$Sprite2D.modulate = Color(0.5, 0.5, 0.5, 1)  # 灰色
 	
 	# 2秒后处理死亡逻辑
 	await get_tree().create_timer(2.0).timeout
@@ -83,4 +80,4 @@ func _handle_death():
 func reset():
 	is_dead = false
 	velocity = Vector2.ZERO
-	$Sprite2D.color = Color(1, 0.2, 0.2, 1)  # 恢复红色 
+	$Sprite2D.modulate = Color(1, 1, 1, 1)  # 恢复正常颜色 

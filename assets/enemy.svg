@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- 蘑菇帽 -->
+  <ellipse cx="16" cy="12" rx="15" ry="10" fill="#8B2635"/>
+  
+  <!-- 蘑菇帽上的斑点 -->
+  <circle cx="10" cy="8" r="3" fill="#FFFFFF"/>
+  <circle cx="22" cy="8" r="3" fill="#FFFFFF"/>
+  <circle cx="16" cy="6" r="2" fill="#FFFFFF"/>
+  <circle cx="8" cy="14" r="2" fill="#FFFFFF"/>
+  <circle cx="24" cy="14" r="2" fill="#FFFFFF"/>
+  
+  <!-- 蘑菇柄/身体 -->
+  <rect x="6" y="18" width="20" height="12" rx="3" fill="#F5DEB3"/>
+  
+  <!-- 眼睛 -->
+  <ellipse cx="11" cy="22" rx="2" ry="3" fill="#000000"/>
+  <ellipse cx="21" cy="22" rx="2" ry="3" fill="#000000"/>
+  
+  <!-- 眼白 -->
+  <ellipse cx="11.5" cy="21" rx="1" ry="1.5" fill="#FFFFFF"/>
+  <ellipse cx="21.5" cy="21" rx="1" ry="1.5" fill="#FFFFFF"/>
+  
+  <!-- 嘴巴 -->
+  <ellipse cx="16" cy="26" rx="4" ry="2" fill="#000000"/>
+  
+  <!-- 獠牙 -->
+  <polygon points="13,26 15,28 17,26" fill="#FFFFFF"/>
+  <polygon points="15,26 17,28 19,26" fill="#FFFFFF"/>
+  
+  <!-- 脚部 -->
+  <ellipse cx="11" cy="31" rx="3" ry="1.5" fill="#654321"/>
+  <ellipse cx="21" cy="31" rx="3" ry="1.5" fill="#654321"/>
+</svg> 
